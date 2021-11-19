@@ -12,6 +12,13 @@ Options:
 """ 
 
 from docopt import docopt
+
 opt = docopt(__doc__)
-print(opt)
-print(type(opt))
+
+def main():
+    print(opt)
+    print(type(opt))
+    print("additional print")
+
+if __name__ == "__main__":
+    main(opt["arg1"], opt["arg4"], opt["--arg2"], opt["--arg4"])
